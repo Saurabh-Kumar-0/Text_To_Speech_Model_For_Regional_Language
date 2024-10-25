@@ -6,25 +6,18 @@ import os
 
 import torch
 
-
 from IPython.display import Audio
-
 
 import soundfile as sf
 
-
 from speechbrain.pretrained import EncoderClassifier
-
 
 from transformers import SpeechT5Processor, SpeechT5ForTextToSpeech, SpeechT5HifiGan
 
 
-
 processor = SpeechT5Processor.from_pretrained("microsoft/speecht5_tts")
 
-
 vocoder = SpeechT5HifiGan.from_pretrained("microsoft/speecht5_hifigan")
-
 
 
 spk_model_name = "speechbrain/spkrec-xvect-voxceleb"
