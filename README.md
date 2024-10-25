@@ -3,7 +3,6 @@ Fine Tuned TTS model on different Languages
 # Importing necessary libraries
 import os
 
-
 import torch
 
 from IPython.display import Audio
@@ -29,13 +28,10 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 speaker_model = EncoderClassifier.from_hparams(
 
-
     source=spk_model_name,
-
     
     run_opts={"device": device},
 
-    
     savedir=os.path.join("/tmp", spk_model_name),
 
     
@@ -44,53 +40,37 @@ speaker_model = EncoderClassifier.from_hparams(
 
 # Load a sample from the dataset for speaker embedding
 
-
 try:
 
-
     dataset = load_dataset("mozilla-foundation/common_voice_17_0", "hi", split="validated", trust_remote_code=True)
-
     
     dataset = dataset.cast_column("audio", Audio(sampling_rate=16000))
-
     
     sample = dataset[0]
-
     
     speaker_embedding = create_speaker_embedding(sample['audio']['array'])
-
     
 except Exception as e:
 
-
     print(f"Error loading dataset: {e}")
 
-    
     # Use a random speaker embedding as fallback
 
-    
     speaker_embedding = torch.randn(1, 512)
 
-    
 
 def create_speaker_embedding(waveform):
 
-
     with torch.no_grad():
-
     
         speaker_embeddings = speaker_model.encode_batch(torch.tensor(waveform))
-
         
         speaker_embeddings = torch.nn.functional.normalize(speaker_embeddings, dim=2)
-
         
         speaker_embeddings = speaker_embeddings.squeeze().cpu().numpy()
 
-        
     return speaker_embeddings
 
-    
 
 # You can access the fine-tuned model using the command mentioned below
 
