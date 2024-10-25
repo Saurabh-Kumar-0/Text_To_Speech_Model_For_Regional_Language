@@ -1,6 +1,6 @@
 # TTS_IITR
 Fine Tuned TTS model on different Languages
-# Importing necessary libraries
+Importing necessary libraries:
 import os
 
 import torch
