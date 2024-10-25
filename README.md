@@ -72,11 +72,16 @@ def create_speaker_embedding(waveform):
     return speaker_embeddings
 
 
-# You can access the fine-tuned model using the command mentioned below
+# You can access the General Hindi Fine tuned TTS model using the command below
 
 
 model = SpeechT5ForTextToSpeech.from_pretrained("Sana1207/Hindi_SpeechT5_finetuned")
 
+
+# You can access the English Technical Fine tuned TTS model using the command below
+
+
+model = SpeechT5ForTextToSpeech.from_pretrained("Sana1207/SpeechT5_English_Technical_Fine_Tuned")
 
 
 # Enter the text you want to convert in Audio
