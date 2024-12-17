@@ -183,14 +183,16 @@ For queries or support, please reach out:
 
 ## ⭐ **If you like this project, don’t forget to give it a star!** ⭐  
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/yourusername/hindi-tts-finetuned?style=social" alt="GitHub Stars">
-  <img src="https://img.shields.io/badge/License-MIT-blue" alt="License">
+<p align="center"> 
+   <a href="https://huggingface.co/Saurabh1207/Hindi_SpeechT5_finetuned"> 
+      <img src="https://img.shields.io/badge/HuggingFace-Model%20Card-yellow?logo=huggingface" alt="Hugging Face Model"> 
+   </a> 
+   <a href="https://huggingface.co/Saurabh1207/Hindi_SpeechT5_finetuned"> 
+      <img src="https://img.shields.io/github/stars/yourusername/hindi-tts-finetuned?style=social" alt="Stars on Hugging Face"> 
+   </a> 
+   <img src="https://img.shields.io/badge/License-MIT-blue" alt="License"> 
 </p>
 
 ---
-
-Let me know if you need any further tweaks, changes, or additional elements! 🚀
-
 
   
